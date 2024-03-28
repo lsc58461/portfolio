@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import '../styles/global.css';
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='ko'>
-      <body>{children}</body>
+      <body className='bg-[#181818]'>{children}</body>
     </html>
   );
 }

@@ -1,0 +1,11 @@
+export { default as IconLogo } from './logo.svg';
+export { default as IconHTML } from './HTML.svg';
+export { default as IconCSS } from './CSS.svg';
+export { default as IconJavaScript } from './javaScript.svg';
+export { default as IconNextjs } from './nextjs.svg';
+export { default as IconReact } from './react.svg';
+export { default as IconTypeScript } from './typeScript.svg';
+export { default as IconRedux } from './redux.svg';
+export { default as IconArrowRight } from './arrowRight.svg';
+export { default as IconArrowLeft } from './arrowLeft.svg';
+export { default as IconReadingGlasses } from './readingGlasses.svg';
