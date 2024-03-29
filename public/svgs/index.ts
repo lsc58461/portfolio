@@ -10,3 +10,5 @@ export { default as IconArrowRight } from './arrowRight.svg';
 export { default as IconArrowLeft } from './arrowLeft.svg';
 export { default as IconReadingGlasses } from './readingGlasses.svg';
 export { default as IconPeople } from './people.svg';
+export { default as IconLike } from './like.svg';
+export { default as IconContact } from './contact.svg';
