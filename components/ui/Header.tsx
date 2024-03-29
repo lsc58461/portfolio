@@ -16,17 +16,15 @@ function Header() {
       <div className='flex items-center gap-16pxr'>
         <div className='flex gap-14pxr'>
           <button>
-            <IconArrowLeft />
+            <IconArrowLeft fill='#868686' />
           </button>
           <button>
-            <IconArrowRight />
+            <IconArrowRight fill='#868686' />
           </button>
         </div>
         <div className='w-432pxr gap-10pxr rounded-[10px] border border-[#454545] bg-[#242424] py-4pxr flex-center'>
-          <IconReadingGlasses />
-          <h1 className='leading-6 text-white font-body2'>
-            이정윤의 포트폴리오
-          </h1>
+          <IconReadingGlasses fill='#868686' />
+          <h1 className='leading-6 font-body2'>이정윤의 포트폴리오</h1>
         </div>
       </div>
       <div></div>

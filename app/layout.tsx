@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import '../styles/global.css';
+import '../styles/snow.css';
 
 interface RootLayoutProps {
   children: React.ReactNode;

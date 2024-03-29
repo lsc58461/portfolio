@@ -12,3 +12,6 @@ export { default as IconReadingGlasses } from './readingGlasses.svg';
 export { default as IconPeople } from './people.svg';
 export { default as IconLike } from './like.svg';
 export { default as IconContact } from './contact.svg';
+export { default as IconMessage } from './message.svg';
+export { default as IconClip } from './clip.svg';
+export { default as IconGithub } from './github.svg';
