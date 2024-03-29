@@ -1,6 +1,7 @@
 import Header from '@/ui/Header';
 import SideBar from '@/ui/SideBar';
-import { SIDEBAR_CONFIG } from '../constants';
+import NavBar from '@/ui/NavBar';
+import { NAVBAR_CONFIG, SIDEBAR_CONFIG } from '../constants';
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
       <Header />
       <div className='flex'>
         <SideBar iconConfig={SIDEBAR_CONFIG} />
+        <NavBar categoryConfig={NAVBAR_CONFIG} />
       </div>
     </div>
   );
