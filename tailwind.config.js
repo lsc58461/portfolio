@@ -28,6 +28,9 @@ module.exports = {
       }, {}),
     },
     extend: {
+      height: {
+        'sidebar-full': 'calc(100vh - 46px)',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -35,6 +38,7 @@ module.exports = {
       },
       boxShadow: {
         custom: '0px 4px 23px 0px rgba(0, 0, 0, 0.07)',
+        button: '0px 4px 12px 0px rgba(0, 0, 0, 0.25);',
       },
       backgroundColor: {
         'black-50': 'rgba(0, 0, 0, 0.50)',

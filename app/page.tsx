@@ -1,6 +1,10 @@
+import Header from '@/ui/Header';
+
 function Home() {
   return (
-    <div className='text-40pxr text-white font-h1-semibold'>hello world!</div>
+    <div>
+      <Header />
+    </div>
   );
 }
 
