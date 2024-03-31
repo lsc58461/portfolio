@@ -6,13 +6,15 @@ function Profile() {
   return (
     <div className='flex flex-col gap-80pxr'>
       <div className='gap-56pxr flex-center'>
-        <Image
-          src={profileImage}
-          width={280}
-          height={280}
-          quality={100}
-          alt='프로필 이미지'
-        />
+        <div className='shadow-profile h-280pxr w-280pxr overflow-hidden rounded-full bg-[#568290] pt-24pxr flex-center'>
+          <Image
+            src={profileImage}
+            width={192}
+            height={256}
+            quality={100}
+            alt='프로필 이미지'
+          />
+        </div>
         <div className='flex flex-col gap-24pxr'>
           <ProfileContent type='name'>asd</ProfileContent>
           <ProfileContent type='phoneNumber'>asd</ProfileContent>
