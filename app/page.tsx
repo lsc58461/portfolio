@@ -3,6 +3,7 @@ import SideBar from '@/ui/SideBar';
 import NavBar from '@/ui/NavBar';
 import { NAVBAR_CONFIG, SIDEBAR_CONFIG } from '../constants';
 import { Profile, TechnologyStackList } from '@/index';
+import ProjectCardList from '@/ui/ProjectCardList';
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
           <section>
             <TechnologyStackList />
           </section>
+          <ProjectCardList />
         </div>
       </div>
     </div>

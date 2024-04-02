@@ -41,6 +41,8 @@ module.exports = {
         button: '0px 4px 12px 0px rgba(0, 0, 0, 0.25)',
         stack: '0px 0px 15px 0px rgba(255, 255, 255, 0.30) inset',
         profile: '0px 0px 15px 0px rgba(255, 255, 255, 0.30)',
+        projectCard: '0px 4px 50px 0px rgba(255, 255, 255, 0.30)',
+        projectCards: '0px 4px 50px 0px rgba(255, 255, 255, 0.15)',
       },
       dropShadow: {
         stack: '0px 0px 5px rgba(255, 255, 255, 0.30)',
