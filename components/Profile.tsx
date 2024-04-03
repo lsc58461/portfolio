@@ -1,18 +1,19 @@
 import Image from 'next/image';
-import profileImage from '../../public/pngs/profile.png';
-import { ProfileContent } from '..';
+import profileImage from '../public/pngs/profile.png';
+import { ProfileContent } from '.';
 
 function Profile() {
   return (
     <div className='flex flex-col gap-80pxr'>
-      <div className='gap-56pxr flex-center'>
-        <div className='shadow-profile h-280pxr w-280pxr overflow-hidden rounded-full bg-[#568290] pt-24pxr flex-center'>
+      <div className='flex-row-center gap-56pxr'>
+        <div className='flex-row-center h-280pxr w-280pxr overflow-hidden rounded-full bg-[#568290] pt-24pxr shadow-profile'>
           <Image
             src={profileImage}
             width={192}
             height={256}
             quality={100}
             alt='프로필 이미지'
+            priority
           />
         </div>
         <div className='flex flex-col gap-24pxr'>

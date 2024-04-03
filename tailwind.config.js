@@ -28,9 +28,7 @@ module.exports = {
       }, {}),
     },
     extend: {
-      height: {
-        'sidebar-full': 'calc(100vh - 46px)',
-      },
+      height: {},
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -84,8 +82,11 @@ module.exports = {
   plugins: [
     ({ addUtilities }) => {
       const newUtilities = {
-        '.flex-center': {
+        '.flex-row-center': {
           '@apply flex flex-row items-center justify-center': '',
+        },
+        '.flex-col-center': {
+          '@apply flex flex-col items-center justify-center': '',
         },
         '.font-h1-semibold': {
           fontSize: pxToRem(48),

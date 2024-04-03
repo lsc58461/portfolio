@@ -10,6 +10,61 @@ body {
   color: white;
 }
 
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-rainbow {
+  background: linear-gradient(
+    90deg,
+    #ff000013,
+    #ff800013,
+    #ffff0013,
+    #00ff0013,
+    #00ff8013,
+    #80ff0013,
+    #00ffff13,
+    #0080ff13,
+    #0000ff13,
+    #8000ff13,
+    #ff00ff13,
+    #ff008013
+  );
+  background-size: 2000% 2000%;
+  animation: rainbow 15s linear infinite;
+}
+
+.text-rainbow {
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff8000,
+    #ffff00,
+    #00ff00,
+    #00ff80,
+    #80ff00,
+    #00ffff,
+    #0080ff,
+    #0000ff,
+    #8000ff,
+    #ff00ff,
+    #ff0080
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 2000% 2000%;
+  animation: rainbow 15s linear infinite;
+}
+
 @font-face {
   font-family: 'Pretendard Variable';
   font-weight: 45 920;
@@ -19,141 +74,38 @@ body {
     format('woff2-variations');
 }
 
-@keyframes bounce {
+@keyframes skeleton {
   0% {
-    transform: translateY(0px);
+    background-position: 100% 50%;
   }
-
-  50% {
-    transform: translateY(10px);
-  }
-
   100% {
-    transform: translateY(0px);
+    background-position: 0% 50%;
   }
 }
 
-.stackBounce:hover {
-  animation: bounce 0.5s ease-in-out;
+*::-webkit-scrollbar {
+  width: 7px;
 }
 
-.stack div:nth-child(1) {
-  animation: bounce 1s ease-in-out infinite;
+*::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 3px;
 }
 
-.stack div:nth-child(2) {
-  animation: bounce 1s ease-in-out infinite;
-  animation-delay: 100ms;
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #acacac;
 }
 
-.stack div:nth-child(3) {
-  animation: bounce 1s ease-in-out infinite;
-  animation-delay: 200ms;
+*::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.stack div:nth-child(4) {
-  animation: bounce 1s ease-in-out infinite;
-  animation-delay: 300ms;
+*::-webkit-scrollbar-button {
+  display: none;
 }
 
-.stack div:nth-child(5) {
-  animation: bounce 1s ease-in-out infinite;
-  animation-delay: 400ms;
-}
-
-.stack div:nth-child(6) {
-  animation: bounce 1s ease-in-out infinite;
-  animation-delay: 500ms;
-}
-
-.stack div:nth-child(7) {
-  animation: bounce 1s ease-in-out infinite;
-  animation-delay: 600ms;
-}
-
-@keyframes nextChangeCard {
-  0% {
-    transform: translateY(0px) scale(1);
-  }
-
-  50% {
-    transform: translateY(-80px) scale(0.7);
-  }
-
-  100% {
-    transform: translateY(-10px) scale(1);
-  }
-}
-
-@keyframes prevChangeCard {
-  0% {
-    transform: translateY(-60px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes nextChangeCards {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(0.9);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes prevChangeCards {
-  0% {
-    transform: translateY(-30px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.projectCardChangeNext {
-  z-index: -9999 !important;
-  animation: nextChangeCard 0.3s ease-in-out;
-}
-
-.projectCardChangePrev {
-  animation: prevChangeCard 0.3s ease-in-out;
-}
-
-.projectCardsChangeNext div:nth-child(1) {
-  animation: nextChangeCards 0.25s ease-in-out;
-  animation-delay: 0ms;
-}
-
-.projectCardsChangeNext div:nth-child(2) {
-  animation: nextChangeCards 0.25s ease-in-out;
-  animation-delay: 20ms;
-}
-
-.projectCardsChangeNext div:nth-child(3) {
-  animation: nextChangeCards 0.25s ease-in-out;
-  animation-delay: 40ms;
-}
-
-.projectCardsChangePrev div:nth-child(1) {
-  animation: prevChangeCards 0.25s ease-in-out;
-  animation-delay: 40ms;
-}
-
-.projectCardsChangePrev div:nth-child(2) {
-  animation: prevChangeCards 0.25s ease-in-out;
-  animation-delay: 20ms;
-}
-
-.projectCardsChangePrev div:nth-child(3) {
-  animation: prevChangeCards 0.25s ease-in-out;
-  animation-delay: 0ms;
+.skeletonAnimation {
+  background: linear-gradient(90deg, #333333 25%, #555555 37%, #333333 63%);
+  background-size: 400% 100%;
+  animation: skeleton 0.8s infinite linear;
 }

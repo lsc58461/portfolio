@@ -5,7 +5,7 @@ import {
   IconGithub,
   IconMessage,
   IconPeople,
-} from '../../public/svgs';
+} from '../public/svgs';
 
 interface Props {
   type: 'name' | 'phoneNumber' | 'email' | 'github' | 'blog';
@@ -29,7 +29,7 @@ function ProfileContent({ type, children }: Props) {
   };
 
   return (
-    <div className='flex !font-light leading-6 font-body2'>
+    <div className='flex font-light leading-6 font-body2'>
       <div className='flex w-111pxr gap-9pxr font-body2'>
         {ProfileContentConfig().icon}
         {ProfileContentConfig().title}
