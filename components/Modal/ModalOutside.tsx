@@ -1,15 +1,15 @@
-import { ReactNode } from 'react';
+import { ReactNode, MouseEvent } from 'react';
 
 interface Props {
-  onClose: () => void;
+  onCloseClick: () => void;
   children: ReactNode;
 }
 
-function ModalOutside({ onClose, children }: Props) {
+function ModalOutside({ onCloseClick, children }: Props) {
   return (
     <div
-      className='fixed bottom-0pxr right-0pxr z-10 h-screen w-screen'
-      onClick={onClose}
+      className='fixed bottom-0pxr right-0pxr h-screen w-screen'
+      onClick={onCloseClick}
     >
       {children}
     </div>

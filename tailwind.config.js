@@ -28,6 +28,9 @@ module.exports = {
       }, {}),
     },
     extend: {
+      width: {
+        modalImageSection: 'calc(100% - 7px)',
+      },
       height: {},
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -80,6 +83,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwind-scrollbar-hide'),
     ({ addUtilities }) => {
       const newUtilities = {
         '.flex-row-center': {

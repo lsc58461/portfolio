@@ -1,4 +1,4 @@
-interface Link {
+export interface Link {
   name: string;
   url: string;
 }
@@ -81,10 +81,6 @@ const PROJECT_CONFIG: ProjectConfig[] = [
       {
         name: 'GitHub',
         url: 'https://github.com/lsc58461/portfolio',
-      },
-      {
-        name: 'Notion',
-        url: '',
       },
       {
         name: 'URL',

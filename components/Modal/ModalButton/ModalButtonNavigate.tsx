@@ -3,8 +3,9 @@ import { IconArrowShortLeft, IconArrowShortRight } from '../../../public/svgs';
 interface Props {
   direction: 'left' | 'right';
   onButtonClick: () => void;
+  disabled?: boolean;
 }
-function ModalButtonNavigate({ direction, onButtonClick }: Props) {
+function ModalButtonNavigate({ direction, onButtonClick, disabled }: Props) {
   const typeOfIcon = () => {
     switch (direction) {
       case 'left':
@@ -19,6 +20,7 @@ function ModalButtonNavigate({ direction, onButtonClick }: Props) {
     <button
       className='h-35pxr w-35pxr rounded-full bg-white flex-row-center'
       onClick={onButtonClick}
+      disabled={disabled}
     >
       {typeOfIcon()}
     </button>

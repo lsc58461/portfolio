@@ -1,9 +1,7 @@
-import ButtonBounce from './ButtonBounce';
-import ButtonPrimary from './ButtonPrimary';
+import ButtonProjectNavigation from './ButtonProjectNavigation';
 
 const Button = Object.assign({
-  Primary: ButtonPrimary,
-  Bounce: ButtonBounce,
+  ProjectNavigation: ButtonProjectNavigation,
 });
 
 export default Button;

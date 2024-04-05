@@ -1,4 +1,4 @@
-import ModalImage from './ModalImage';
+import { ModalImage } from '..';
 
 interface Props {
   imageUrls?: string[];
