@@ -9,7 +9,7 @@ interface Props {
 
 function ModalLinkButtonList({ Links }: Props) {
   return (
-    <div className='w-modalImageSection absolute bottom-0pxr gap-14pxr bg-[linear-gradient(0deg,rgba(50,50,50,0.8)_0%,rgba(50,50,50,0.6)_29%,rgba(50,50,50,0)_100%)] py-16pxr flex-row-center'>
+    <div className='absolute bottom-0pxr w-modalImageSection translate-y-1pxr gap-14pxr bg-[linear-gradient(0deg,rgba(50,50,50,1)_0%,rgba(50,50,50,0.8)_29%,rgba(50,50,50,0)_100%)] py-16pxr flex-row-center'>
       <IconClip className='fill-white' />
       {Links.map((link, index) => (
         <Link

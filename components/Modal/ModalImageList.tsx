@@ -8,9 +8,11 @@ function ModalImageList({ imageUrls }: Props) {
   return (
     <section className='modalScrollBar h-487pxr overflow-hidden overflow-y-scroll'>
       <div className='flex flex-col gap-10pxr'>
-        <ModalImage />
-        <ModalImage />
-        <ModalImage />
+        {imageUrls ? (
+          imageUrls.map((url, index) => <ModalImage key={index} url={url} />)
+        ) : (
+          <div className='h-full w-490pxr' />
+        )}
       </div>
     </section>
   );

@@ -93,6 +93,7 @@ function ProjectCardList() {
           projectDescription={PROJECT_CONFIG[currentPage].description}
           Links={PROJECT_CONFIG[currentPage].links}
           technologyStacks={PROJECT_CONFIG[currentPage].technologyStacks}
+          imageUrls={PROJECT_CONFIG[currentPage].imageUrls}
         />
       )}
     </div>

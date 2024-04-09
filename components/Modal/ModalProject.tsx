@@ -9,7 +9,7 @@ import {
   ModalTitle,
   ModalWrapper,
 } from '..';
-import { Link } from '../../constants/PROJECT_CONFIG';
+import { Link, ProjectDescription } from '../../constants/PROJECT_CONFIG';
 
 interface Props {
   onCloseClick: () => void;
@@ -20,9 +20,10 @@ interface Props {
   projectCategory: string;
   period: string;
   projectOrder: string;
-  projectDescription: string;
+  projectDescription: ProjectDescription;
   Links: Link[];
   technologyStacks: string[];
+  imageUrls: string[];
 }
 
 function ModalProject({
@@ -37,6 +38,7 @@ function ModalProject({
   projectDescription,
   Links,
   technologyStacks,
+  imageUrls,
 }: Props) {
   return (
     <ModalPortal>
@@ -53,12 +55,17 @@ function ModalProject({
           />
           <ModalContentsSection>
             <div className='relative'>
-              <ModalImageList />
+              <ModalImageList imageUrls={imageUrls} />
               <ModalLinkButtonList Links={Links} />
             </div>
-            <ModalContentDescription projectOrder={projectOrder}>
-              {projectDescription}
-            </ModalContentDescription>
+            <ModalContentDescription
+              projectOrder={projectOrder}
+              projectIntroduce={projectDescription.projectIntroduce}
+              projectTeamMembers={projectDescription.projectTeamMembers}
+              projectRole={projectDescription.roles}
+              ProjectTakeaway={projectDescription.takeaways}
+              ProjectSolvedProblems={projectDescription.solvedProblems}
+            />
           </ModalContentsSection>
           <ModalStackBadgeList technologyStacks={technologyStacks} />
         </ModalWrapper>
