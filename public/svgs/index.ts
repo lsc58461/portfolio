@@ -17,3 +17,5 @@ export { default as IconClip } from './clip.svg';
 export { default as IconGithub } from './github.svg';
 export { default as IconTailwind } from './tailwind.svg';
 export { default as IconMoon } from './moon.svg';
+export { default as IconArrowShortLeft } from './arrowShortLeft.svg';
+export { default as IconArrowShortRight } from './arrowShortRight.svg';

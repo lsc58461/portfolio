@@ -28,9 +28,10 @@ module.exports = {
       }, {}),
     },
     extend: {
-      height: {
-        'sidebar-full': 'calc(100vh - 46px)',
+      width: {
+        modalImageSection: 'calc(100% - 7px)',
       },
+      height: {},
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -41,6 +42,8 @@ module.exports = {
         button: '0px 4px 12px 0px rgba(0, 0, 0, 0.25)',
         stack: '0px 0px 15px 0px rgba(255, 255, 255, 0.30) inset',
         profile: '0px 0px 15px 0px rgba(255, 255, 255, 0.30)',
+        projectCard: '0px 4px 50px 0px rgba(255, 255, 255, 0.30)',
+        projectCards: '0px 4px 50px 0px rgba(255, 255, 255, 0.15)',
       },
       dropShadow: {
         stack: '0px 0px 5px rgba(255, 255, 255, 0.30)',
@@ -80,10 +83,14 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwind-scrollbar-hide'),
     ({ addUtilities }) => {
       const newUtilities = {
-        '.flex-center': {
+        '.flex-row-center': {
           '@apply flex flex-row items-center justify-center': '',
+        },
+        '.flex-col-center': {
+          '@apply flex flex-col items-center justify-center': '',
         },
         '.font-h1-semibold': {
           fontSize: pxToRem(48),

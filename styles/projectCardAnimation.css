@@ -1,0 +1,152 @@
+@keyframes nextChangeCard {
+  0% {
+    left: 0rem;
+    width: 18.75rem;
+    height: 25.25rem;
+    padding: 2.1875rem;
+    padding: 2.5rem 2.375rem;
+    background-color: rgba(124, 124, 124, 0.6);
+    transform: translateY(5rem);
+  }
+
+  25% {
+    transform: translateY(-6.25rem);
+  }
+
+  50% {
+    z-index: -9999;
+    left: 1.1875rem;
+    width: 16.5rem;
+    height: 22rem;
+    padding: 2.1875rem;
+    background-color: rgba(181, 181, 181, 0.5);
+    transform: translateY(1.25rem);
+  }
+
+  100% {
+    z-index: -9999;
+    left: 1.1875rem;
+    width: 16.5rem;
+    height: 22rem;
+    padding: 2.1875rem;
+    background-color: rgba(181, 181, 181, 0.5);
+    transform: translateY(4.9375rem);
+  }
+}
+
+@keyframes prevChangeCard {
+  0% {
+    transform: translateY(-3.75rem);
+  }
+
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes nextChangeCards {
+  0% {
+    transform: translateY(0rem);
+  }
+
+  100% {
+    transform: translateY(-0.625rem);
+  }
+}
+
+@keyframes prevChangeCards {
+  0% {
+    transform: translateY(-1.875rem) scale(0.9);
+  }
+
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes nextChangeSecondCard {
+  0% {
+    top: 4.375rem;
+    gap: 3.75rem;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    gap: 3.125rem;
+    width: 18.75rem;
+    height: 25.25rem;
+    padding: 2.5rem 2.375rem;
+    background-color: rgba(124, 124, 124, 0.6);
+  }
+}
+
+@keyframes nextChangeSecondCardDiv {
+  0% {
+    width: 12.125rem;
+    height: 7.75rem;
+  }
+
+  100% {
+    width: 13.75rem;
+    height: 9.625rem;
+  }
+}
+
+@keyframes nextChangeSecondCardDivSecond {
+  0% {
+    font-size: 1.75rem;
+  }
+
+  100% {
+    font-size: 2rem;
+  }
+}
+
+.projectCardChangeNext {
+  animation: nextChangeCard 0.5s ease-in-out;
+}
+
+.projectCardChangePrev {
+  animation: prevChangeCard 0.5s ease-in-out;
+}
+
+.projectCardsChangeNext .secondCard {
+  animation: nextChangeSecondCard 0.5s ease-in-out;
+  animation-delay: 0ms;
+}
+
+.projectCardsChangeNext .secondCard .firstBox {
+  animation: nextChangeSecondCardDiv 0.5s ease-in-out;
+  animation-delay: 0ms;
+}
+
+.projectCardsChangeNext .secondCard .secondBox {
+  animation: nextChangeSecondCardDivSecond 0.5s ease-in-out;
+  animation-delay: 0ms;
+}
+
+.projectCardsChangeNext .thirdCard {
+  animation: nextChangeCards 0.5s ease-in-out;
+  animation-delay: 20ms;
+}
+
+.projectCardsChangeNext .fourthCard {
+  animation: nextChangeCards 0.5s ease-in-out;
+  animation-delay: 40ms;
+}
+
+.projectCardsChangePrev .secondCard {
+  animation: prevChangeCards 0.5s ease-in-out;
+  animation-delay: 40ms;
+}
+
+.projectCardsChangePrev .thirdCard {
+  animation: prevChangeCards 0.5s ease-in-out;
+  animation-delay: 20ms;
+}
+
+.projectCardsChangePrev .fourthCard {
+  animation: prevChangeCards 0.5s ease-in-out;
+  animation-delay: 0ms;
+}

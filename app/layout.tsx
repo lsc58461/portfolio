@@ -14,7 +14,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='ko'>
-      <body className='bg-[#181818]'>{children}</body>
+      <body className='bg-[#181818]'>
+        {children}
+        <div id='modal' />
+      </body>
     </html>
   );
 }

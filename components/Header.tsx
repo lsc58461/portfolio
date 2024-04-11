@@ -4,7 +4,7 @@ import {
   IconArrowRight,
   IconLogo,
   IconReadingGlasses,
-} from '../../public/svgs';
+} from '../public/svgs';
 import Link from 'next/link';
 
 function Header() {
@@ -22,7 +22,7 @@ function Header() {
             <IconArrowRight fill='#868686' />
           </button>
         </div>
-        <div className='w-432pxr gap-10pxr rounded-[10px] border border-[#454545] bg-[#242424] py-4pxr flex-center'>
+        <div className='flex-row-center w-432pxr gap-10pxr rounded-[10px] border border-[#454545] bg-[#242424] py-4pxr'>
           <IconReadingGlasses fill='#868686' />
           <h1 className='leading-6 font-body2'>이정윤의 포트폴리오</h1>
         </div>
