@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { Button, ModalProject, ProjectAnimationCard, ProjectCard } from '.';
 import { PROJECT_ANIMATION_CARD_CONFIG, PROJECT_CONFIG } from '../constants';
-import '../styles/projectCardAnimation.css';
 import { usePagination, useModal, useDelayedProjectConfig } from '../hooks';
+import '../styles/projectCardAnimation.css';
 
 function ProjectCardList() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -16,7 +16,8 @@ function ProjectCardList() {
   const { delayedName, delayedType, animationState, setAnimationState } =
     useDelayedProjectConfig({
       currentPage,
-      delay: 125,
+      prevDelay: 0,
+      nextDelay: 125,
       animationDelay: 500,
       initialAnimationState: 'None',
     });
@@ -48,6 +49,18 @@ function ProjectCardList() {
     }
   };
 
+  const {
+    name,
+    type,
+    period,
+    imageUrls,
+    description,
+    technologyStacks,
+    links,
+  } = PROJECT_CONFIG[currentPage];
+
+  const formattedProjectOrder = String(currentPage + 1).padStart(2, '0');
+
   return (
     <div className='gap-117pxr py-120pxr flex-row-center'>
       <Button.ProjectNavigation
@@ -69,8 +82,8 @@ function ProjectCardList() {
               key={index}
               order={card.order}
               customStyle={card.customStyle}
-              name={PROJECT_CONFIG[currentPage].name}
-              type={PROJECT_CONFIG[currentPage].type}
+              name={name}
+              type={type}
             />
           ))}
         </div>
@@ -86,14 +99,14 @@ function ProjectCardList() {
           onNextClick={handleNextClick}
           onPrevClick={handlePrevClick}
           isButtonDisabled={isButtonDisabled}
-          title={PROJECT_CONFIG[currentPage].name}
-          projectCategory={PROJECT_CONFIG[currentPage].type}
-          period={PROJECT_CONFIG[currentPage].period}
-          projectOrder={String(currentPage + 1).padStart(2, '0')}
-          projectDescription={PROJECT_CONFIG[currentPage].description}
-          Links={PROJECT_CONFIG[currentPage].links}
-          technologyStacks={PROJECT_CONFIG[currentPage].technologyStacks}
-          imageUrls={PROJECT_CONFIG[currentPage].imageUrls}
+          title={name}
+          projectCategory={type}
+          period={period}
+          projectOrder={formattedProjectOrder}
+          projectDescription={description}
+          Links={links}
+          technologyStacks={technologyStacks}
+          imageUrls={imageUrls}
         />
       )}
     </div>

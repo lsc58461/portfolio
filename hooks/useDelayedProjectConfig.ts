@@ -5,14 +5,16 @@ type AnimationStateType = 'Prev' | 'Next' | 'None';
 
 interface Props {
   currentPage: number;
-  delay: number;
+  prevDelay: number;
+  nextDelay: number;
   animationDelay?: number;
   initialAnimationState?: AnimationStateType;
 }
 
 function useDelayedProjectConfig({
   currentPage,
-  delay,
+  prevDelay,
+  nextDelay,
   animationDelay = 0,
   initialAnimationState = 'None',
 }: Props) {
@@ -23,16 +25,19 @@ function useDelayedProjectConfig({
   );
 
   useEffect(() => {
-    const projectName = PROJECT_CONFIG[currentPage].name;
-    const projectType = PROJECT_CONFIG[currentPage].type;
+    const { name: projectName, type: projectType } =
+      PROJECT_CONFIG[currentPage];
 
-    const nameTimer = setTimeout(() => {
-      setDelayedName(projectName);
-    }, delay);
+    const nameTimer = setTimeout(
+      () => {
+        setDelayedName(projectName);
+      },
+      animationState === 'Prev' ? prevDelay : nextDelay,
+    );
 
     const typeTimer = setTimeout(() => {
       setDelayedType(projectType);
-    }, delay);
+    }, nextDelay);
 
     if (initialAnimationState && animationDelay) {
       const animationTimer = setTimeout(() => {
@@ -52,7 +57,14 @@ function useDelayedProjectConfig({
       clearTimeout(nameTimer);
       clearTimeout(typeTimer);
     };
-  }, [currentPage, delay, animationDelay, initialAnimationState]);
+  }, [
+    animationDelay,
+    animationState,
+    currentPage,
+    initialAnimationState,
+    nextDelay,
+    prevDelay,
+  ]);
 
   return { delayedName, delayedType, animationState, setAnimationState };
 }
