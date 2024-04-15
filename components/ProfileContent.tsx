@@ -6,6 +6,7 @@ import {
   IconMessage,
   IconPeople,
 } from '../public/svgs';
+import Link from 'next/link';
 
 interface Props {
   type: 'name' | 'phoneNumber' | 'email' | 'github' | 'blog';
@@ -29,12 +30,18 @@ function ProfileContent({ type, children }: Props) {
   };
 
   return (
-    <div className='flex font-light leading-6 font-body2'>
-      <div className='flex w-111pxr gap-9pxr font-body2'>
+    <div className='flex font-light leading-6 font-body2 mobile:flex-col '>
+      <div className='flex w-111pxr gap-9pxr !text-20pxr font-body2'>
         {ProfileContentConfig().icon}
         {ProfileContentConfig().title}
       </div>
-      {children}
+      {type === 'github' || type === 'blog' ? (
+        <Link href={children as string}>
+          <p className='hover:underline mobile:text-18pxr'>{children}</p>
+        </Link>
+      ) : (
+        <p className='mobile:text-18pxr'>{children}</p>
+      )}
     </div>
   );
 }

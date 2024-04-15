@@ -21,7 +21,7 @@ function ModalContentDescription({
   ProjectSolvedProblems,
 }: Props) {
   return (
-    <section className='h-487pxr w-501pxr flex-[1_0_0%] overflow-hidden overflow-y-scroll'>
+    <section className='h-487pxr w-full max-w-501pxr overflow-hidden overflow-y-scroll mobile:h-800pxr mobile:max-w-600pxr mobile:pb-40pxr tablet:max-w-600pxr'>
       <div className='flex min-h-487pxr w-full flex-col gap-20pxr border border-[#4d4d4d] p-20pxr'>
         <h3 className='leading-[79%] font-h1-semibold'>{projectOrder}</h3>
         <div className='flex flex-col gap-24pxr !font-light leading-6 font-body2'>

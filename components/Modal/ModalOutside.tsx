@@ -8,7 +8,7 @@ interface Props {
 function ModalOutside({ onCloseClick, children }: Props) {
   return (
     <div
-      className='fixed bottom-0pxr right-0pxr h-screen w-screen'
+      className='fixed bottom-0pxr right-0pxr z-[9999] h-screen w-screen'
       onClick={onCloseClick}
     >
       {children}

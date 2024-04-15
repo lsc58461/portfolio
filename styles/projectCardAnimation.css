@@ -3,10 +3,8 @@
     left: 0rem;
     width: 18.75rem;
     height: 25.25rem;
-    padding: 2.1875rem;
     padding: 2.5rem 2.375rem;
     background-color: rgba(124, 124, 124, 0.6);
-    transform: translateY(5rem);
   }
 
   25% {
@@ -14,7 +12,7 @@
   }
 
   50% {
-    z-index: -9999;
+    z-index: -50;
     left: 1.1875rem;
     width: 16.5rem;
     height: 22rem;
@@ -24,7 +22,7 @@
   }
 
   100% {
-    z-index: -9999;
+    z-index: -50;
     left: 1.1875rem;
     width: 16.5rem;
     height: 22rem;
@@ -66,8 +64,6 @@
 
 @keyframes nextChangeSecondCard {
   0% {
-    top: 4.375rem;
-    gap: 3.75rem;
   }
 
   100% {
@@ -149,4 +145,149 @@
 .projectCardsChangePrev .fourthCard {
   animation: prevChangeCards 0.5s ease-in-out;
   animation-delay: 0ms;
+}
+
+@keyframes nextChangeCardMobile {
+  0% {
+    width: 12.5rem;
+    height: 17.5rem;
+    padding: 1.25rem 1.125rem;
+    background-color: rgba(124, 124, 124, 0.6);
+  }
+
+  25% {
+    transform: translateY(-6.25rem);
+  }
+
+  50% {
+    z-index: -50;
+    width: 10.25rem;
+    height: 15.75rem;
+    padding: 1.25rem 1.125rem;
+    background-color: rgba(181, 181, 181, 0.5);
+    transform: translateY(0.625rem);
+  }
+
+  100% {
+    z-index: -50;
+    width: 10.25rem;
+    height: 15.75rem;
+    padding: 1.25rem 1.125rem;
+    background-color: rgba(181, 181, 181, 0.5);
+    transform: translateY(3.625rem);
+  }
+}
+
+@keyframes prevChangeCardMobile {
+  0% {
+    transform: translateY(-3.75rem);
+  }
+
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes nextChangeCardsMobile {
+  0% {
+    transform: translateY(0rem);
+  }
+
+  100% {
+    transform: translateY(-0.625rem);
+  }
+}
+
+@keyframes prevChangeCardsMobile {
+  0% {
+    transform: translateY(-1.875rem) scale(0.9);
+  }
+
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes nextChangeSecondCardMobile {
+  0% {
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    width: 12.5rem;
+    height: 17.5rem;
+    padding: 1.25rem 1.125rem;
+    background-color: rgba(124, 124, 124, 0.6);
+  }
+}
+
+@keyframes nextChangeSecondCardDivMobile {
+  0% {
+  }
+
+  100% {
+    width: 100%;
+    height: 6.25rem;
+  }
+}
+
+@keyframes nextChangeSecondCardDivSecondMobile {
+  0% {
+    font-size: 1.75rem;
+  }
+
+  100% {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 20rem) and (max-width: 47.9375rem) {
+  .projectCardChangeNext {
+    animation: nextChangeCardMobile 0.5s ease-in-out;
+  }
+
+  .projectCardChangePrev {
+    animation: prevChangeCardMobile 0.5s ease-in-out;
+  }
+
+  .projectCardsChangeNext .secondCard {
+    animation: nextChangeSecondCardMobile 0.5s ease-in-out;
+    animation-delay: 0ms;
+  }
+
+  .projectCardsChangeNext .secondCard .firstBox {
+    animation: nextChangeSecondCardDivMobile 0.5s ease-in-out;
+    animation-delay: 0ms;
+  }
+
+  .projectCardsChangeNext .secondCard .secondBox {
+    animation: nextChangeSecondCardDivSecondMobile 0.5s ease-in-out;
+    animation-delay: 0ms;
+  }
+
+  .projectCardsChangeNext .thirdCard {
+    animation: nextChangeCardsMobile 0.5s ease-in-out;
+    animation-delay: 20ms;
+  }
+
+  .projectCardsChangeNext .fourthCard {
+    animation: nextChangeCardsMobile 0.5s ease-in-out;
+    animation-delay: 40ms;
+  }
+
+  .projectCardsChangePrev .secondCard {
+    animation: prevChangeCardsMobile 0.5s ease-in-out;
+    animation-delay: 40ms;
+  }
+
+  .projectCardsChangePrev .thirdCard {
+    animation: prevChangeCardsMobile 0.5s ease-in-out;
+    animation-delay: 20ms;
+  }
+
+  .projectCardsChangePrev .fourthCard {
+    animation: prevChangeCardsMobile 0.5s ease-in-out;
+    animation-delay: 0ms;
+  }
 }

@@ -3,6 +3,7 @@ import {
   ModalContentsSection,
   ModalImageList,
   ModalLinkButtonList,
+  ModalNavigator,
   ModalOutside,
   ModalPortal,
   ModalStackBadgeList,
@@ -46,28 +47,36 @@ function ModalProject({
         <ModalWrapper
           onNextClick={onNextClick}
           onPrevClick={onPrevClick}
+          onCloseClick={onCloseClick}
           isButtonDisabled={isButtonDisabled}
         >
-          <ModalTitle
-            title={title}
-            projectCategory={projectCategory}
-            period={period}
-          />
-          <ModalContentsSection>
-            <div className='relative'>
-              <ModalImageList imageUrls={imageUrls} />
-              <ModalLinkButtonList Links={Links} />
-            </div>
-            <ModalContentDescription
-              projectOrder={projectOrder}
-              projectIntroduce={projectDescription.projectIntroduce}
-              projectTeamMembers={projectDescription.projectTeamMembers}
-              projectRole={projectDescription.roles}
-              ProjectTakeaway={projectDescription.takeaways}
-              ProjectSolvedProblems={projectDescription.solvedProblems}
+          <div className='gap-20pxr scrollbar-hide flex-col-center mobile:h-full mobile:justify-start mobile:overflow-y-scroll tablet:h-full tablet:justify-start tablet:overflow-y-scroll'>
+            <ModalTitle
+              title={title}
+              projectCategory={projectCategory}
+              period={period}
             />
-          </ModalContentsSection>
-          <ModalStackBadgeList technologyStacks={technologyStacks} />
+            <ModalStackBadgeList technologyStacks={technologyStacks} />
+            <ModalContentsSection>
+              <div className='relative'>
+                <ModalImageList imageUrls={imageUrls} />
+                <ModalLinkButtonList Links={Links} />
+              </div>
+              <ModalContentDescription
+                projectOrder={projectOrder}
+                projectIntroduce={projectDescription.projectIntroduce}
+                projectTeamMembers={projectDescription.projectTeamMembers}
+                projectRole={projectDescription.roles}
+                ProjectTakeaway={projectDescription.takeaways}
+                ProjectSolvedProblems={projectDescription.solvedProblems}
+              />
+            </ModalContentsSection>
+          </div>
+          <ModalNavigator
+            onPrevClick={onPrevClick}
+            onNextClick={onNextClick}
+            isButtonDisabled={isButtonDisabled}
+          />
         </ModalWrapper>
       </ModalOutside>
     </ModalPortal>
