@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import '../styles/global.css';
 import '../styles/snow.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface RootLayoutProps {
   children: React.ReactNode;

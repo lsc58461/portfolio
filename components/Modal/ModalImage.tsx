@@ -7,6 +7,7 @@ interface Props {
 function ModalImage({ url }: Props) {
   return (
     <Image
+      className='mobile:w-full tablet:w-full'
       height={266}
       width={490}
       src={url}

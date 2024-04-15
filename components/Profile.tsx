@@ -5,8 +5,8 @@ import { ProfileContent } from '.';
 function Profile() {
   return (
     <div className='flex flex-col gap-80pxr'>
-      <div className='flex-row-center gap-56pxr'>
-        <div className='flex-row-center h-280pxr w-280pxr overflow-hidden rounded-full bg-[#568290] pt-24pxr shadow-profile'>
+      <div className='flex-wrap gap-56pxr flex-row-center'>
+        <div className='h-280pxr w-280pxr overflow-hidden rounded-full bg-[#568290] pt-24pxr shadow-profile flex-row-center mobile:h-200pxr mobile:w-200pxr'>
           <Image
             src={profileImage}
             width={192}
@@ -16,12 +16,16 @@ function Profile() {
             priority
           />
         </div>
-        <div className='flex flex-col gap-24pxr'>
-          <ProfileContent type='name'>asd</ProfileContent>
-          <ProfileContent type='phoneNumber'>asd</ProfileContent>
-          <ProfileContent type='email'>asd@naver.com</ProfileContent>
-          <ProfileContent type='github'>asd</ProfileContent>
-          <ProfileContent type='blog'>asd</ProfileContent>
+        <div className='flex flex-col gap-24pxr mobile:gap-20pxr'>
+          <ProfileContent type='name'>이정윤</ProfileContent>
+          <ProfileContent type='phoneNumber'>010-8266-3635</ProfileContent>
+          <ProfileContent type='email'>lsc58461@gmail.com</ProfileContent>
+          <ProfileContent type='github'>
+            https://github.com/lsc58461/
+          </ProfileContent>
+          <ProfileContent type='blog'>
+            https://velog.io/@lsc58461
+          </ProfileContent>
         </div>
       </div>
       <h2 className='text-center !font-extralight font-title3-medium'>

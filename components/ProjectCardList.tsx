@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, ModalProject, ProjectAnimationCard, ProjectCard } from '.';
 import { PROJECT_ANIMATION_CARD_CONFIG, PROJECT_CONFIG } from '../constants';
 import { usePagination, useModal, useDelayedProjectConfig } from '../hooks';
@@ -61,14 +61,17 @@ function ProjectCardList() {
 
   const formattedProjectOrder = String(currentPage + 1).padStart(2, '0');
 
+  useEffect(() => {
+    document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isModalOpen]);
+
   return (
-    <div className='gap-117pxr py-120pxr flex-row-center'>
-      <Button.ProjectNavigation
-        direction='prev'
-        disabled={isButtonDisabled}
-        onClick={handlePrevClick}
-      />
-      <div className='relative h-404pxr w-300pxr'>
+    <div className='relative gap-80pxr py-120pxr flex-row-center mobile:flex-col mobile:gap-30pxr mobile:py-80pxr'>
+      <div className='relative h-404pxr w-300pxr mobile:flex mobile:items-start mobile:justify-center'>
         <button type='button' onClick={modalOpen}>
           <ProjectCard
             name={delayedName}
@@ -76,7 +79,9 @@ function ProjectCardList() {
             animationClassName={animationClassName()}
           />
         </button>
-        <div className={`projectCardsChange${animationState}`}>
+        <div
+          className={`projectCardsChange${animationState} mobile:absolute mobile:left-50pxr`}
+        >
           {PROJECT_ANIMATION_CARD_CONFIG.map((card, index) => (
             <ProjectAnimationCard
               key={index}
@@ -88,11 +93,22 @@ function ProjectCardList() {
           ))}
         </div>
       </div>
-      <Button.ProjectNavigation
-        direction='next'
-        disabled={isButtonDisabled}
-        onClick={handleNextClick}
-      />
+      <div className='absolute flex justify-between gap-450pxr mobile:top-430pxr mobile:gap-20pxr'>
+        <div className=''>
+          <Button.ProjectNavigation
+            direction='prev'
+            disabled={isButtonDisabled}
+            onClick={handlePrevClick}
+          />
+        </div>
+        <div className=''>
+          <Button.ProjectNavigation
+            direction='next'
+            disabled={isButtonDisabled}
+            onClick={handleNextClick}
+          />
+        </div>
+      </div>
       {isModalOpen && (
         <ModalProject
           onCloseClick={modalClose}

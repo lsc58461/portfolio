@@ -9,7 +9,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    deviceSizes: [320, 767],
+    deviceSizes: [320, 767, 1200],
     remotePatterns: [
       {
         protocol: 'https',

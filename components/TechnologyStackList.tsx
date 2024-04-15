@@ -5,7 +5,7 @@ import TECHNOLOGY_STACK_CONFIG from '../constants/TECHNOLOGY_STACK_CONFIG';
 
 function TechnologyStackList() {
   return (
-    <div className='flex gap-20pxr pb-120pxr pt-80pxr'>
+    <div className='flex flex-wrap justify-center gap-20pxr'>
       {TECHNOLOGY_STACK_CONFIG.map((stack, index) => (
         <motion.div
           key={index}
