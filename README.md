@@ -14,6 +14,13 @@
 <br/>
 <br/>
 
+## 피그마 주소
+
+### <a href='https://www.figma.com/file/2t4GZ6VGKHrSZS1foUqwrz/Untitled?type=design&node-id=0%3A1&mode=design&t=LB4OG076zuX2xjL7-1' target="_blank" rel="noopener noreferrer">피그마</a>
+
+<br/>
+<br/>
+
 ## 프로젝트 주요 기능
 
 - 연락 수단 제공: 사용자와의 연락을 쉽게 할 수 있는 수단을 제공합니다.
