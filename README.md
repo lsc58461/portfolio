@@ -9,14 +9,14 @@
 
 ## 배포 주소
 
-### <a href='https://jeongyun-portfolio.vercel.app' target="_blank" rel="noopener noreferrer">CamPro</a>
+### <a href='https://jeongyun-portfolio.vercel.app' target="_blank" rel="noopener noreferrer">Portfolio</a>
 
 <br/>
 <br/>
 
 ## 피그마 주소
 
-### <a href='https://www.figma.com/file/2t4GZ6VGKHrSZS1foUqwrz/Untitled?type=design&node-id=0%3A1&mode=design&t=LB4OG076zuX2xjL7-1' target="_blank" rel="noopener noreferrer">피그마</a>
+### <a href='https://www.figma.com/file/2t4GZ6VGKHrSZS1foUqwrz/Untitled?type=design&node-id=0%3A1&mode=design&t=LB4OG076zuX2xjL7-1' target="_blank" rel="noopener noreferrer">Figma</a>
 
 <br/>
 <br/>
