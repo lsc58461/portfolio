@@ -71,7 +71,7 @@ function ProjectCardList() {
 
   return (
     <div className='relative gap-80pxr py-120pxr flex-row-center mobile:flex-col mobile:gap-30pxr mobile:py-80pxr'>
-      <div className='relative h-404pxr w-300pxr mobile:flex mobile:items-start mobile:justify-center'>
+      <div className='relative z-10 h-404pxr w-300pxr mobile:flex mobile:h-280pxr mobile:items-start mobile:justify-center'>
         <button type='button' onClick={modalOpen}>
           <ProjectCard
             name={delayedName}
@@ -93,7 +93,7 @@ function ProjectCardList() {
           ))}
         </div>
       </div>
-      <div className='absolute flex justify-between gap-450pxr mobile:top-430pxr mobile:gap-20pxr'>
+      <div className='absolute flex justify-between gap-400pxr mobile:top-430pxr mobile:gap-20pxr'>
         <div className=''>
           <Button.ProjectNavigation
             direction='prev'

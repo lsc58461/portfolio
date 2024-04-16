@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
+import { ReactNode } from 'react';
+import { ToastContainer } from 'react-toastify';
+import { Header, NavBar, SideBar } from '@/index';
+import { NAVBAR_CONFIG, SIDEBAR_CONFIG } from '../constants';
 import '../styles/global.css';
 import '../styles/snow.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const metadata: Metadata = {
@@ -16,7 +20,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='ko'>
       <body className='bg-[#181818]'>
+        <Header />
         {children}
+        <ToastContainer position='top-right' theme='dark' />
         <div id='modal' />
       </body>
     </html>
