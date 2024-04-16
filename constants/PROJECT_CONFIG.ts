@@ -38,11 +38,17 @@ const PROJECT_CONFIG: ProjectConfig[] = [
     type: '팀 프로젝트',
     period: '2024.01 ~ 2024.02 (약 6주)',
     imageUrls: [
-      '/gifs/campro-main.gif',
-      '/avifs/campro-map.png',
-      '/images/projects/campro/03.jpg',
-      '/images/projects/campro/04.jpg',
-      '/images/projects/campro/05.jpg',
+      '/avifs/campro/campro-main.avif',
+      '/avifs/campro/campro-main2.avif',
+      '/avifs/campro/campro-map.avif',
+      '/avifs/campro/campro-overview.avif',
+      '/avifs/campro/campro-overview2.avif',
+      '/avifs/campro/campro-reservation.avif',
+      '/avifs/campro/campro-reservation_list.avif',
+      '/avifs/campro/campro-reservation_detail.avif',
+      '/avifs/campro/campro-onboarding.avif',
+      '/avifs/campro/campro-onboarding2.avif',
+      '/avifs/campro/campro-owner.avif',
     ],
     description: {
       projectIntroduce: `- 캠핑에 익숙하지 않은 초보 캠퍼들을 위한 취향 저격 맞춤 캠핑장을 추천할 수 있는 웹서비스입니다.
@@ -109,10 +115,11 @@ const PROJECT_CONFIG: ProjectConfig[] = [
     type: '개인 프로젝트',
     period: '2024.03.11 ~ 2024.04.06 (약 4주)',
     imageUrls: [
-      '/pngs/portfolio-main.png',
-      '/images/projects/portfolio/02.jpg',
-      '/images/projects/portfolio/03.jpg',
-      '/images/projects/portfolio/04.jpg',
+      '/avifs/portfolio/portfolio-main.avif',
+      '/avifs/portfolio/portfolio-projects.avif',
+      '/avifs/portfolio/portfolio-modal.avif',
+      '/avifs/portfolio/portfolio-contact.avif',
+      '/avifs/portfolio/portfolio-not_found.avif',
     ],
     description: {
       projectIntroduce: `포트폴리오 사이트입니다. Next.js를 사용해 만들었으며, TypeScript, Tailwind CSS, Framer Motion을 사용했습니다.
@@ -126,7 +133,14 @@ const PROJECT_CONFIG: ProjectConfig[] = [
       takeaways: `포트폴리오 사이트를 만들면서 Next.js의 사용법을 익히고, TypeScript를 사용해보며 타입스크립트의 장점을 느낄 수 있었습니다.
 또한, Tailwind CSS를 사용해보며 CSS를 빠르게 작성할 수 있었고, Framer Motion을 사용해 애니메이션을 적용할 수 있었습니다.
 또한, Git과 GitHub를 사용해 형상관리를 경험할 수 있었습니다.`,
-      solvedProblems: [{ problem: '문제', solution: '해결' }],
+      solvedProblems: [
+        {
+          problem:
+            'ref 객체를 prop으로 내렸을 때 "use client"를 사용해야하는 문제',
+          solution:
+            'zustand를 사용하여 ref 객체를 전역으로 관리를 함으로써 해결',
+        },
+      ],
     },
     technologyStacks: [
       'Next.js(App Router)',
@@ -154,10 +168,9 @@ const PROJECT_CONFIG: ProjectConfig[] = [
     type: '팀 프로젝트',
     period: '2023.12.18 ~ 2024.01.05 (약 2주)',
     imageUrls: [
-      '/images/projects/give-more/01.jpg',
-      '/images/projects/give-more/02.jpg',
-      '/images/projects/give-more/03.jpg',
-      '/images/projects/give-more/04.jpg',
+      '/avifs/givemore/givemore-main.avif',
+      '/avifs/givemore/givemore-overview.avif',
+      '/avifs/givemore/givemore-owner.avif',
     ],
     description: {
       projectIntroduce: `급하게 일손이 필요한 자리에 더 많은 시급을 제공해서 아르바이트생을 구할 수 있는 서비스입니다.`,
@@ -207,10 +220,9 @@ const PROJECT_CONFIG: ProjectConfig[] = [
     type: '팀 프로젝트',
     period: '2023.11.03 ~ 2023.11.18 (약 2주)',
     imageUrls: [
-      '/images/projects/rolling/01.jpg',
-      '/images/projects/rolling/02.jpg',
-      '/images/projects/rolling/03.jpg',
-      '/images/projects/rolling/04.jpg',
+      '/avifs/rolling/rolling-landing.avif',
+      '/avifs/rolling/rolling-main.avif',
+      '/avifs/rolling/rolling-post.avif',
     ],
     description: {
       projectIntroduce: `롤링페이퍼라는 주제로 사람들이 서로에게 감사나 축하 또는 전달하고 싶은 메시지를 전달할 수 있는 디지털 플랫폼입니다.`,
