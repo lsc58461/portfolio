@@ -16,7 +16,7 @@ function Profile() {
             priority
           />
         </div>
-        <div className='flex flex-col gap-24pxr mobile:gap-20pxr'>
+        <div className='flex flex-col gap-24pxr mobile:gap-22pxr'>
           <ProfileContent type='name'>이정윤</ProfileContent>
           <ProfileContent type='phoneNumber'>010-8266-3635</ProfileContent>
           <ProfileContent type='email'>lsc58461@gmail.com</ProfileContent>
