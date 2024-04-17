@@ -77,6 +77,7 @@ function ProjectCardList() {
             name={delayedName}
             type={delayedType}
             animationClassName={animationClassName()}
+            imageSrc={imageUrls[0]}
           />
         </button>
         <div
@@ -89,6 +90,11 @@ function ProjectCardList() {
               customStyle={card.customStyle}
               name={name}
               type={type}
+              imageSrc={
+                PROJECT_CONFIG[
+                  PROJECT_CONFIG.length < currentPage + 2 ? 0 : currentPage + 1
+                ]?.imageUrls[0]
+              }
             />
           ))}
         </div>
