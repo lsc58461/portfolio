@@ -145,6 +145,7 @@ const PROJECT_CONFIG: ProjectConfig[] = [
     technologyStacks: [
       'Next.js(App Router)',
       'TypeScript',
+      'Zustand',
       'React Hook Form',
       'Tailwind CSS',
       'Framer Motion',
@@ -159,7 +160,7 @@ const PROJECT_CONFIG: ProjectConfig[] = [
       },
       {
         name: 'URL',
-        url: 'https://portfolio-lsc58461.vercel.app/',
+        url: 'https://jeongyun-portfolio.vercel.app/',
       },
     ],
   },
